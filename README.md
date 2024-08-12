@@ -1,1 +1,1 @@
-Проект https://github.com/ruslan18900/zakrivayuschiy-teg
+https://github.com/ruslan18900/zakrivayuschiy-teg
