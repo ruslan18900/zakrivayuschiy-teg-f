@@ -217,7 +217,7 @@
   line-height: normal;
   text-transform: uppercase;
   text-shadow: 0 0 1px var(--page-background-color, #ffffff);
-  inset-inline-end: 26px;
+  inset-inline-end: 14px;
   inset-block-start: 24px;
   mix-blend-mode: hard-light;
 }
@@ -270,10 +270,11 @@
   position: relative;
   z-index: 1;
   border: 2px solid var(--text-color, #000000);
-  padding: 10px 36px;
+  padding-block: 7px;
+  min-inline-size: 130px;
   font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
   font-size: 14px;
-  text-transform: inherit;
+  text-transform: inherit; 
   background: var(--page-background-color, #ffffff);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   cursor: pointer;
@@ -281,7 +282,8 @@
 }
 
 .button:active {
-  transform: scale(1);
+  transform: none;
+  box-shadow: none;
 }
 
 .button:focus {
@@ -316,6 +318,7 @@
   align-items: center;
   gap: 10px;
   padding: 15px 20px;
+  box-sizing: border-box;
 }
 
 .button__text,
@@ -334,7 +337,7 @@
   inline-size: 39px;
 }
 
-@media (width < 376px) {
+@media (width < 375px) {
   .modal {
     padding: 28px 34px 28px 40px;
     max-inline-size: 340px;
@@ -359,4 +362,8 @@
     -webkit-text-stroke: 1px var(--page-background-color, #ffffff);
     text-shadow: 1px var(--page-background-color, #ffffff);
   }
+}
+
+:root {
+  --paragraph-font-weight: 400;
 }
